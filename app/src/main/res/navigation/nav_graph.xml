@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.palermo.fragments.FacturasFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_facturas">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.palermo.fragments.FacturasAddFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_nueva_factura">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FacFragment"
+            app:destination="@id/FacFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FacFragment"
+        android:name="com.example.palermo.fragments.ConfFacturasFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_facturas_lista">
+
+        <action
+            android:id="@+id/action_FacFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FacFragment_to_fragment_facturas"
+            app:destination="@id/FirstFragment" />
+        <argument
+            android:name="json"
+            app:argType="string"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewVinc18"
+        style="@style/textoNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Categoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerCategoria"
+        android:layout_width="145dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewVinc18"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewVinc19"
+        style="@style/textoNormal"
+        android:layout_width="61dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Producto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCategoria" />
+
+    <Spinner
+        android:id="@+id/spinnerProducto"
+        android:layout_width="145dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewVinc19"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCategoria" />
+
+
+    <EditText
+        android:id="@+id/editCantidad"
+        android:layout_width="59dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="4dp"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/spinnerProducto"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCategoria" />
+
+    <TextView
+        android:id="@+id/textViewPU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="PU:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/editCantidad"
+        app:layout_constraintTop_toBottomOf="@+id/botonBorrar" />
+
+    <TextView
+        android:id="@+id/textPU"
+        android:layout_width="65dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewPU"
+        app:layout_constraintTop_toBottomOf="@+id/botonBorrar"
+        tools:text="123232" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="Total:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/editCantidad"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPU" />
+
+    <TextView
+        android:id="@+id/textTotalPro"
+        android:layout_width="54dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewTotal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPU"
+        tools:text="123232" />
+
+    <ImageButton
+        android:id="@+id/botonBorrar"
+        android:layout_width="50dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_delete_sweep_black_24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

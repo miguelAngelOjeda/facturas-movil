@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/textViewCateg"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="CAT-1" />
+
+    <TextView
+        android:id="@+id/textViewProducto"
+        android:layout_width="142dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewCateg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="PRODUCTO" />
+
+    <TextView
+        android:id="@+id/textViewTotalP"
+        android:layout_width="132dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewProducto"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5000000" />
+
+    <TextView
+        android:id="@+id/textView121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Cant :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCateg" />
+
+    <TextView
+        android:id="@+id/textCantidad"
+        android:layout_width="42dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewCateg"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCateg"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:text="P.U.:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textCantidad"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProducto" />
+
+    <TextView
+        android:id="@+id/textPU"
+        android:layout_width="54dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewTotal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProducto"
+        tools:text="123232" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
